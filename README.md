@@ -32,8 +32,9 @@ The server will start and listen for connections from the browser extension.
 - The extension will now communicate with the server to display your YouTube Music activity in Discord.
 
 ### Customization
-Server: Modify server.py to adjust the data sent to Discord. Refer to the Discord Rich Presence documentation for available fields.
-Extension: Edit the manifest.json and background.js files in the extension/ directory to change extension behavior or appearance.
+**Server:** Modify server.py to adjust the data sent to Discord. Refer to the Discord Rich Presence documentation for available fields.
+
+**Extension:** Edit the manifest.json and background.js files in the extension/ directory to change extension behavior or appearance.
 
 License
 This project is licensed under the Apache-2.0 License. See the LICENSE file for details.
