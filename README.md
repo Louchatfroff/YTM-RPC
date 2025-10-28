@@ -11,21 +11,32 @@ YTM-RPC provides a Discord Rich Presence integration for YouTube Music. It consi
 - Python 3.11+
 - `pip` (Python package installer)
 - A Chromium-based browser (e.g., Chrome, Edge)
+- A Discord account to create a Rich Presence application
 
 ## Installation
 
-### 1. Clone the Repository
+### 1. Create a Discord Application for RPC
 
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications).
+2. Click **New Application**.
+3. Give it a name (e.g., `YTM-RPC`) and create it.
+4. Go to the **Rich Presence** tab.
+5. Copy the **Client ID**; you will need it in the server configuration.
+
+### 2. Clone the Repository
 `git clone https://github.com/Louchatfroff/YTM-RPC.git
 cd YTM-RPC`
-### 2. Install Server Dependencies
+
+### 3. Install Server Dependencies
 `pip install -r requirements.txt`
-### 3. Run the Server
+
+### 4. Run the Server
 `python server.py`
 
 The server will start and listen for connections from the browser extension.
 
-### 4. Install the Browser Extension
+
+### 5. Install the Browser Extension
 - Open your browser's extensions page (chrome://extensions/).
 - Enable "Developer mode".
 - Click "Load unpacked" and select the extension/ directory from the cloned repository.
