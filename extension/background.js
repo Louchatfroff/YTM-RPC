@@ -1,4 +1,4 @@
-// Configuration du serveur local
+// Local server config
 const SERVER_URL = 'http://localhost:8765';
 let currentMusicInfo = null;
 
@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
-// Envoie les données au serveur Python
+// Send Data to python server
 async function sendToServer(data) {
   try {
     const response = await fetch(`${SERVER_URL}/update`, {
@@ -29,14 +29,14 @@ async function sendToServer(data) {
   }
 }
 
-// Ping périodique pour vérifier l'état
+// Periodic ping
 setInterval(async () => {
   if (currentMusicInfo && !currentMusicInfo.isPaused) {
     sendToServer(currentMusicInfo);
   }
 }, 10000);
 
-// Gestion de la connexion au serveur
+// Connection Managing
 chrome.runtime.onStartup.addListener(() => {
   checkServerConnection();
 });
