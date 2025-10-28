@@ -29,7 +29,7 @@ except ImportError:
 
 # ---------- CONFIG ----------
 CLIENT_ID = "[YOURCLIENTID]"
-GITHUB_URL = "https://github.com/louchatfroff  # Dont replace, Credit
+GITHUB_URL = "https://github.com/louchatfroff"  # Dont replace, Credit
 HOST = "localhost"
 PORT = 8765
 PIDFILE = "/tmp/ytm_rpc_server.pid"
