@@ -22,10 +22,10 @@ async function sendToServer(data) {
     });
     
     if (!response.ok) {
-      console.error('Erreur serveur:', response.status);
+      console.error('Server Error:', response.status);
     }
   } catch (error) {
-    console.error('Erreur de connexion au serveur:', error);
+    console.error('Failed To Connect To Server:', error);
   }
 }
 
@@ -49,9 +49,9 @@ async function checkServerConnection() {
   try {
     const response = await fetch(`${SERVER_URL}/health`);
     if (response.ok) {
-      console.log('Serveur Python connecté');
+      console.log('Python Server Connected!');
     }
   } catch (error) {
-    console.warn('Serveur Python non disponible. Assurez-vous qu\'il est démarré.');
+    console.warn('Python Server Unavailable, Make Sure It Is Running..');
   }
 }
