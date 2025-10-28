@@ -1,4 +1,4 @@
-// Extrait les informations de lecture depuis YouTube Music
+// Fetch YTM Data
 function extractMusicInfo() {
   const videoElement = document.querySelector('video');
   const titleElement = document.querySelector('.title.style-scope.ytmusic-player-bar');
@@ -27,7 +27,7 @@ function extractMusicInfo() {
   };
 }
 
-// Envoie les informations au service worker
+// Send Data To Worker Services
 function sendMusicInfo() {
   const info = extractMusicInfo();
   if (info) {
@@ -38,7 +38,7 @@ function sendMusicInfo() {
   }
 }
 
-// Observer pour détecter les changements
+// Observe To Detect Changes
 let observer;
 let lastTitle = '';
 
@@ -63,11 +63,11 @@ function startObserver() {
     characterData: true
   });
 
-  // Envoie initial
+  // Initial Sending
   sendMusicInfo();
 }
 
-// Écoute les événements de lecture
+// Listen For Playing Events
 function setupVideoListeners() {
   const videoElement = document.querySelector('video');
   if (!videoElement) {
@@ -78,7 +78,7 @@ function setupVideoListeners() {
   videoElement.addEventListener('play', sendMusicInfo);
   videoElement.addEventListener('pause', sendMusicInfo);
   videoElement.addEventListener('timeupdate', () => {
-    // Envoie toutes les 5 secondes pour économiser les ressources
+    // Send Every 5 seconds
     if (Math.floor(videoElement.currentTime) % 5 === 0) {
       sendMusicInfo();
     }
@@ -89,5 +89,5 @@ function setupVideoListeners() {
 startObserver();
 setupVideoListeners();
 
-// Envoie périodique pour maintenir la connexion
+// Periodically Maintaining Connection
 setInterval(sendMusicInfo, 15000);
