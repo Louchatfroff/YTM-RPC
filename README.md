@@ -19,14 +19,11 @@ YTM-RPC provides a Discord Rich Presence integration for YouTube Music. It consi
 
 git clone https://github.com/Louchatfroff/YTM-RPC.git
 cd YTM-RPC
-2. Install Server Dependencies
-bash
-Copier le code
+### 2. Install Server Dependencies
 pip install -r requirements.txt
-3. Run the Server
-bash
-Copier le code
+### 3. Run the Server
 python server.py
+
 The server will start and listen for connections from the browser extension.
 
 ### 4. Install the Browser Extension
