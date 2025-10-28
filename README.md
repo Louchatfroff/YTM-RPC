@@ -1,7 +1,6 @@
 # YTM-RPC Setup Guide
 
 ## Overview
-
 YTM-RPC provides a Discord Rich Presence integration for YouTube Music. It consists of two components:
 
 - **Server**: A minimal CLI server written in Python.
@@ -17,27 +16,23 @@ YTM-RPC provides a Discord Rich Presence integration for YouTube Music. It consi
 
 ### 1. Clone the Repository
 
-git clone https://github.com/Louchatfroff/YTM-RPC.git
-cd YTM-RPC
+`git clone https://github.com/Louchatfroff/YTM-RPC.git
+cd YTM-RPC`
 ### 2. Install Server Dependencies
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 ### 3. Run the Server
-python server.py
+`python server.py`
 
 The server will start and listen for connections from the browser extension.
 
 ### 4. Install the Browser Extension
-Open your browser's extensions page (chrome://extensions/).
-
-Enable "Developer mode".
-
-Click "Load unpacked" and select the extension/ directory from the cloned repository.
-
-The extension will now communicate with the server to display your YouTube Music activity in Discord.
+- Open your browser's extensions page (chrome://extensions/).
+- Enable "Developer mode".
+- Click "Load unpacked" and select the extension/ directory from the cloned repository.
+- The extension will now communicate with the server to display your YouTube Music activity in Discord.
 
 ### Customization
 Server: Modify server.py to adjust the data sent to Discord. Refer to the Discord Rich Presence documentation for available fields.
-
 Extension: Edit the manifest.json and background.js files in the extension/ directory to change extension behavior or appearance.
 
 License
